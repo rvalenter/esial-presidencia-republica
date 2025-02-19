@@ -17,16 +17,10 @@ defineOptions({ layout: MasterLogado })
     <div class="h-full pt-4">
       <proposition-search />
       <div class="w-full h-full pt-16 pb-4">
-        <div
-          v-show="proposition.id"
-          class="w-full h-full overflow-y-auto"
-        >
+        <div v-show="proposition.id" class="w-full h-full overflow-y-auto">
           <ManagerProposition :proposition="proposition" />
         </div>
-        <div
-          v-show="proposition.length === 0"
-          class="w-full h-full overflow-y-auto"
-        >
+        <div v-show="proposition.length === 0" class="w-full h-full overflow-y-auto">
           <manager-dashboard />
         </div>
       </div>
