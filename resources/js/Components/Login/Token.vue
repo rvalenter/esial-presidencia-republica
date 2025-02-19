@@ -147,11 +147,13 @@ watch(
         <div>
           <p class="text-xs mb-2">Senha:</p>
           <Password v-model="password" :feedback="false" />
-
         </div>
-        <button @click="
+        <button
+          @click="
             $emit('confirmar', { code: codigo, password: 'asdf', type: securityType.tipo_acesso })
-          " class="text-blue-500 text-xs mt-2">
+          "
+          class="text-blue-500 text-xs mt-2"
+        >
           Esqueci minha senha
         </button>
       </div>
