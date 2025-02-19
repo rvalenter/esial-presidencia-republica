@@ -142,12 +142,18 @@ watch(
       </div>
       <div
         v-show="state === 2 && securityType.tipo_acesso !== 1"
-        class="card mt-3 flex justify-center"
+        class="card mt-3 grid grid-cols-1 gap-4"
       >
         <div>
           <p class="text-xs mb-2">Senha:</p>
           <Password v-model="password" :feedback="false" />
+
         </div>
+        <button @click="
+            $emit('confirmar', { code: codigo, password: 'asdf', type: securityType.tipo_acesso })
+          " class="text-blue-500 text-xs mt-2">
+          Esqueci minha senha
+        </button>
       </div>
       <div
         v-if="!showBtnCheck && securityType.tipo_acesso !== 2 && securityType.tipo_acesso !== 1"
