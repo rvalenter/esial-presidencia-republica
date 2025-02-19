@@ -1,0 +1,8 @@
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import 'v-calendar/dist/style.css';
+@import 'floating-vue/dist/style.css';
+@import "primeicons/primeicons.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

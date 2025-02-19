@@ -1,0 +1,11 @@
+prettier $(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g') --write --ignore-unknown
+git update-index --again
+
+npx eslint --fix $(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(js|vue|ts)$')
+npx prettier --write $(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(js|vue|ts|css|scss|json)$')
+
+vendor/bin/php-cs-fixer fix --config=.php_cs --quiet
+
+npm run lint
+
+echo "✅ Commit realizado com sucesso! Lembre-se de rodar os testes antes do push."

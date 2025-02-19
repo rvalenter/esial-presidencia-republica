@@ -1,0 +1,31 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('esial_relatorio_importacao_adesao_individuals', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('codigoParlamentar')->nullable();
+            $table->string('dsc_casa')->nullable();
+            $table->string('adesaoAbsolutaCrucial')->nullable();
+            $table->timestamps();
+
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('esial_relatorio_importacao_adesao_individuals');
+    }
+};

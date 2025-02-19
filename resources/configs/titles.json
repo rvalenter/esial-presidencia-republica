@@ -1,0 +1,12 @@
+{
+    "CalendarNewEvent":
+    {
+        "alert_user": "Este usuário não está cadastrado no sistema, será apenas informado por email do compromisso."
+    },
+    "NotaTecnica":
+    {
+        "nt_finish": "Este posicionamento será enviado para a SEPAR/SRI e não poderá ser editado. Deseja continuar?",
+        "nt_pre_finish": "Este posicionamento será enviado para o Gestor realizar avaliação. Deseja continuar?",
+        "nt_adjusts_required": "Este posicionamento será devolvido para o analista responsável realizar os devidos ajustes. Deseja continuar?"
+    }
+}
