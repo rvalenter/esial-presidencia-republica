@@ -63,6 +63,9 @@ watch(
         <p class="text-justify mt-3 mb-3">
           <strong>Explicacão: </strong>{{ explanation }}
         </p>
+        <p class="text-justify mt-3 mb-3">
+          <strong>Situação: </strong>{{ proposition.situacoes ?? 'Sem situação cadastrada na base de dados.' }}
+        </p>
       </div>
     </div>
   </div>
